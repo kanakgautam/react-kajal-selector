@@ -1,24 +1,27 @@
-import logo from './logo.svg';
+import React ,{useState} from 'react'
+import { HashRouter as Router, Switch, Route } from 'react-router-dom'
 import './App.css';
+import Dropdown from './components/Dropdown.js'
 
 function App() {
+
+  const[dropDown,setDropDown]=useState(false);
+
+  const handleclick = () =>{
+    setDropDown(!dropDown);
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <Router>
+      <div className='container'>
+        <div className='option-selector'>
+          <h2>Kajal</h2>
+          <button className='btn' onClick={handleclick}>Choose your preferred brand</button>
+        </div>
+        {dropDown && <Dropdown />}
+      </div>
+      </Router>
+    </>
   );
 }
 
