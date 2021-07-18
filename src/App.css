@@ -38,8 +38,9 @@
 
 .list {
   margin: 50px;
+  width: 100%;
   list-style: none;
-  text-align: start;
+  text-align: center;
   margin-top: 2px;
-  padding-inline-start: 0;
+  padding-inline: 0;
 }

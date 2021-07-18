@@ -2,7 +2,7 @@ import React from 'react'
 import './SavedItems.css'
 function SavedItems(props) {
     return (
-        <div>
+        <div className='list-item-wrapper'>
             <li className='list-item'>
             <div>Kajal</div>
             <div>{props.value}</div>
